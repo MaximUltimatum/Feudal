@@ -25,5 +25,21 @@ public class StandardPiece {
 		pieceLocation = pointType;
 	}
 	
+	/**
+	 * 
+	 * @return copy of current location of this piece
+	 */
+	public Point getLocation() {return new Point(pieceLocation);}
+
+	/**
+	 * 
+	 * @return piece color
+	 */
+	public Color getColor() {return pieceColor;}	// immutable
 	
+	/**
+	 * 
+	 * @return type of piece to display
+	 */
+	public PieceType getType() {return pieceType;}	// immutable
 }

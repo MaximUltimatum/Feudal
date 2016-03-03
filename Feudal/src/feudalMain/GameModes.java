@@ -3,7 +3,9 @@ package feudalMain;
 import java.awt.Color;
 import java.awt.Point;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.Collections;
 
 import piecesProperties.StandardPiece;
 import playerInput.HumanInput;
@@ -64,5 +66,12 @@ public class GameModes {
 		System.out.println("Please Place your pieces");
 	}
 	
+	/**
+	 * 
+	 * @return a list (that can not be modified) of pieces (which might not be immutable)
+	 */
+	public List<StandardPiece> getPieceList() {
+		return Collections.unmodifiableList(playerPieces);
+	}
 
 }
