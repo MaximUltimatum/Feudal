@@ -11,7 +11,7 @@ public class GameModes {
 	private Object pikeman;
 
 	public void setUp(){
-		playerCount = 2;
+		playerCount = 1;
 		playerColor = "Blue";
 		pikeman = null;
 		

@@ -13,8 +13,8 @@ public class HumanInput {
 		x = replaceLaterScanner.nextInt();
 		System.out.println("What y coordinate?");
 		y = replaceLaterScanner.nextInt();
-		System.out.println(printCoords() + "Thank you!");
 		Point xAndy = new Point(x,y);
+		System.out.println(printCoords() + "Thank you!");
 		return xAndy;
 	}
 	
