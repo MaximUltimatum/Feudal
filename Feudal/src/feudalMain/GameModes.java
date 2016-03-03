@@ -1,19 +1,19 @@
 package feudalMain;
 
+import java.awt.Color;
 import java.awt.Point;
+
 import piecesProperties.StandardPiece;
 import playerInput.HumanInput;
 
 public class GameModes {
 	HumanInput newInput = new HumanInput();
 	private int playerCount;
-	private String playerColor;
-	private Object pikeman;
+	private Color playerColor;
 
 	public void setUp(){
 		playerCount = 1;
-		playerColor = "Blue";
-		pikeman = null;
+		playerColor = Color.BLUE;
 		
 		initializePieces();
 	}
@@ -22,6 +22,7 @@ public class GameModes {
 		for(int i = 0; i < playerCount; i++){
 			System.out.println("Placing Pikeman");
 			Point playerpikeManPlace1 = newInput.getXandY();
+			StandardPiece pikeman1 = new StandardPiece(playerColor, StandardPiece.PieceType.PIKEMAN, playerpikeManPlace1);
 			/*
 			StandardPiece pikeMan1 = new StandardPiece(playerColor, pikeman, playerpikeManPlace1);
 			Point playerpikeManPlace2 = newInput.getXandY();
@@ -34,7 +35,7 @@ public class GameModes {
 			// Activate this when finished with testing
 			System.out.println("Placing Knights");
 			Point playerKnightPlace1 = newInput.getXandY();
-			StandardPiece knight1 = new StandardPiece(playerColor, pikeman, playerKnightPlace1);
+			StandardPiece knight1 = new StandardPiece(playerColor, StandardPiece.PieceType.KNIGHT, playerKnightPlace1);
 			//Point playerKnightPlace2 = newInput.getXandY();
 			//StandardPiece knight2 = new StandardPiece(playerColor, pikeman, playerKnightPlace2);
 			// ACTIVATE THIS WHEN FINISHED WITH TESTING
