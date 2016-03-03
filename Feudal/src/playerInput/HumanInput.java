@@ -7,6 +7,7 @@ public class HumanInput {
 	static Scanner replaceLaterScanner = new Scanner(System.in);
 	private int x;
 	private int y;
+	private int playerNumber;
 	
 	public Point getXandY(){
 		System.out.println("What x coordinate?");
@@ -21,5 +22,10 @@ public class HumanInput {
 	public String printCoords(){
 		String coords = "(" + x + "," + y + ")";
 		return coords;
+	}
+	
+	public void playerSetup(){
+		System.out.println("How many players?");
+		playerNumber = replaceLaterScanner.nextInt();
 	}
 }

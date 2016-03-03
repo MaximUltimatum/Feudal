@@ -9,5 +9,7 @@ public class TheGame {
 		newGame.setUp();
 		
 	}
+	
+	
 
 }

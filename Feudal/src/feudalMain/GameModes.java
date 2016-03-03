@@ -46,4 +46,5 @@ public class GameModes {
 		System.out.println("Please Place your pieces");
 	}
 	
+
 }
