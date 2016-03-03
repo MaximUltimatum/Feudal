@@ -2,6 +2,8 @@ package feudalMain;
 
 import java.awt.Color;
 import java.awt.Point;
+import java.util.ArrayList;
+import java.util.List;
 
 import piecesProperties.StandardPiece;
 import playerInput.HumanInput;
@@ -10,19 +12,33 @@ public class GameModes {
 	HumanInput newInput = new HumanInput();
 	private int playerCount;
 	private Color playerColor;
+	private List<StandardPiece> playerPieces;
 
-	public void setUp(){
+	/**
+	 * default initialization of class attributes
+	 */
+	GameModes() {
 		playerCount = 1;
 		playerColor = Color.BLUE;
-		
+		playerPieces = new ArrayList<StandardPiece>();		
+	}
+	
+	/**
+	 * set up the game
+	 */
+	public void setUp(){		
 		initializePieces();
 	}
 	
+	/**
+	 * create and store the pieces (with user input) 
+	 */
 	void initializePieces(){
 		for(int i = 0; i < playerCount; i++){
 			System.out.println("Placing Pikeman");
-			Point playerpikeManPlace1 = newInput.getXandY();
-			StandardPiece pikeman1 = new StandardPiece(playerColor, StandardPiece.PieceType.PIKEMAN, playerpikeManPlace1);
+			final Point playerpikeManPlace1 = newInput.getXandY();
+			final StandardPiece pikeman1 = new StandardPiece(playerColor, StandardPiece.PieceType.PIKEMAN, playerpikeManPlace1);
+			playerPieces.add(pikeman1);
 			/*
 			StandardPiece pikeMan1 = new StandardPiece(playerColor, pikeman, playerpikeManPlace1);
 			Point playerpikeManPlace2 = newInput.getXandY();
@@ -34,8 +50,9 @@ public class GameModes {
 			*/
 			// Activate this when finished with testing
 			System.out.println("Placing Knights");
-			Point playerKnightPlace1 = newInput.getXandY();
-			StandardPiece knight1 = new StandardPiece(playerColor, StandardPiece.PieceType.KNIGHT, playerKnightPlace1);
+			final Point playerKnightPlace1 = newInput.getXandY();
+			final StandardPiece knight1 = new StandardPiece(playerColor, StandardPiece.PieceType.KNIGHT, playerKnightPlace1);
+			playerPieces.add(knight1);
 			//Point playerKnightPlace2 = newInput.getXandY();
 			//StandardPiece knight2 = new StandardPiece(playerColor, pikeman, playerKnightPlace2);
 			// ACTIVATE THIS WHEN FINISHED WITH TESTING
