@@ -3,7 +3,7 @@ package feudalMain;
 import piecesProperties.StandardPiece;
 
 public class GameModes {
-	public static void startGame(){
+	public static void setUp(){
 		int playerCount = 2;
 		String playerColor = "Blue";
 		Object pikeman = null;
@@ -14,4 +14,5 @@ public class GameModes {
 			StandardPiece pikeMan1 = new StandardPiece(playerColor, pikeman, playerPlaceX, playerPlaceY);
 		}
 	}
+	
 }
