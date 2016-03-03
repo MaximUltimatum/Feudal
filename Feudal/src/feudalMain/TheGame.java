@@ -3,7 +3,9 @@ package feudalMain;
 public class TheGame {
 
 	public static void main(String[] args) {
-		GameModes.setUp();
+		GameModes newGame = new GameModes();
+		newGame.welcome();
+		newGame.setUp();
 		
 	}
 
